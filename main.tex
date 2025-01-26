@@ -1,0 +1,74 @@
+\documentclass[english, a4paper, 11pt, twoside, numbers=noenddot, openright,version=3.21]{scrbook}
+
+\input{./layout/packages.tex}
+\input{./layout/layout.tex}
+\input{./layout/usersettings.tex}
+
+\title{Visualization Verification of Complex Avionic Models Using Computer Vision}
+\author{Franz K{\"o}hler}
+\date{07.10.2024}
+
+\hypersetup{
+	pdftitle    = {\thetitle},
+	pdfsubject  = {Visualization Verification of Complex Avionic Models Using Computer Vision},
+	pdfauthor   = {\theauthor},
+	pdfkeywords = {bachelorthesis, computervision, python, opencv, uml, verification},
+	pdfborder   = 0 0 0,
+	plainpages  = false,
+	bookmarksnumbered = true,
+	colorlinks=false,
+	citecolor=Violet,
+	linkcolor=Red,
+	urlcolor=Blue
+}
+
+\begin{document}
+
+\begin{sloppypar}
+\hbadness=99999
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
+\includepdf[pages={1}]{./Cover/cover.pdf}
+\cleardoublepage
+\hypersetup{pageanchor=true}
+
+\pagenumbering{Roman}
+
+\includepdf[pages={1-2}]{Preamble/task.pdf}
+\include{preamble/statement_of_authorship}
+\include{preamble/abstract_en}
+\include{preamble/abstract_ger}
+
+% Contents
+\tableofcontents
+% Figures
+\listoffigures
+% Tables
+\listoftables
+%Glossar
+\printglossary[style=super,title=Glossary]
+% Abbrevations
+\printglossary[type=\acronymtype,title=Index of abbreviations]
+% Symbols and Units
+\printglossary[type=symbolslist,style=symbunitlong,title={Index of Symbols and Units}]
+
+\cleardoublepage
+\pagenumbering{arabic}
+\include{chapters/1_introduction}  
+\include{chapters/2_concepts}
+\include{chapters/3_integration}
+\include{chapters/4_results}
+\include{chapters/5_discussion}
+
+\normalem
+\nocite{*}
+\printbibliography[heading=bibintoc,title=Bibliography]
+
+\appendix
+\pretocmd{\chapter}{
+	\cleardoublepage
+	\pagenumbering{arabic}
+	\renewcommand*{\thepage}{\thechapter\arabic{page}}
+}{}{}
+\end{sloppypar}
+\end{document}

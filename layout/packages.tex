@@ -1,0 +1,81 @@
+% Page layout
+\usepackage{geometry}                    % set page layout
+\usepackage{setspace}                    % set line spacing
+\usepackage[automark]{scrlayer-scrpage}  % Koma header and footer package
+
+% Language, coding and font
+\usepackage{lmodern}                     % Font - as requested by ILS
+\usepackage[english]{babel}              % Language setting (last defined is standard)
+\usepackage[T1]{fontenc}                 % Hyphenation for words with Umlaute
+\usepackage[utf8]{inputenc}              % Coding for correct display of Umlaute
+\usepackage[english]{translator}         % Übersetzer
+\usepackage{longtable}                   % Tables with page break
+\usepackage{tabu}                        % Advanced table package
+\usepackage{datetime}                    % Date and time formatting
+\usepackage{ltablex}                     % Use this package instead of tabularx for long tables with X columns
+
+% Graphics and colors
+\usepackage[pdftex]{graphicx}            % Include graphics
+\usepackage{epstopdf}                    % Include eps graphics
+\usepackage{color}                       % Colors
+\usepackage[svgnames,table]{xcolor}      % Advanced colors
+\usepackage{pythonhighlight}             % Highlight Python code
+\usepackage{wrapfig}                     % Wrap images in text
+\usepackage{framed}                      % Gray background for quotes
+
+% Math
+\usepackage{amsmath,amsthm}              % Math environment
+\usepackage{textcomp}                     % Degree symbol
+
+% Floats
+\usepackage[section]{placeins}           % Control float placement, \FloatBarrier command
+
+% Other
+\usepackage[hyphens]{url}                % URL
+\usepackage{hyperref}                    % Settings for PDF document
+\usepackage{caption}                     % for modification caption format
+\usepackage{subcaption}                  % For subfigures
+\usepackage{csquotes}                    % Recommended
+\usepackage{pdfpages}                    % include PDF pages
+\usepackage{lipsum}                      % lorem ipsum blindtext
+\usepackage{siunitx}                     % si einheiten
+\usepackage{microtype}                   % underfull und overfull box problem minimierung
+\usepackage{etoolbox}                    % Appendix Buchstabenseitenzahl
+\usepackage{float}                       % In der Lage figures explizit an einer Stelle im Text zu fixieren
+\setuptoc{toc}{totoc}                    % Add table of contents to the table of contents
+\setuptoc{lof}{totoc}                    % Add list of figures to the table of contents
+\setuptoc{lot}{totoc}                    % Add list of tables to the table of contents
+\setuptoc{bib}{totoc}                    % Add bibliography to the table of contents
+\usepackage{ulem}                        % Underline text
+\usepackage{paralist}                    % Modifikation von Listen
+\usepackage{titling}                     % \theauthor macro
+\usepackage{tabularx}                    % Tabellen
+
+% Customizable Enumerates/Itemizes
+\usepackage{enumitem}                    % Bsp.: Option "style=nextline" für eine gleichmäßige Einrückung aller Zeilen
+
+% Tables
+\usepackage{lscape}                      % mehrseitige Tabellen
+\usepackage{booktabs}                    % \toprule \midrule \bottomrule
+\usepackage{colortbl}                    % farbige Tabellen / Tabellen einfärben
+\usepackage{multirow}                    % mehrere Zeilen verbinden
+\usepackage{array}                       % Hilfsmittel zum Setzen von Tabellen und geordneten Texten im Mathematischem Modus
+
+% Bibliography
+\usepackage[
+    backend=bibtex,                      % Backends Biblatex
+    style=ieee,                          % Bibliogragrafiestil IEEE
+    natbib=true                          % Kompatibilitätsmodul natbib
+]{biblatex}
+\addbibresource{./bibliography/bib.bib}  % Dateipfad zur Bib Datei
+
+% Glossaries
+\usepackage[
+    xindy,
+    nonumberlist,                        % keine Seitenzahlen anzeigen
+    nopostdot,                           % keine Punkte
+    style=super,                         % Style
+    acronym,                             % ein Abkkürzungsverzeichnis erstellen
+    toc,                                 % Einträge im Inhaltsverzeichnis
+    section=chapter                      % im Inhaltsverzeichnis auf section-Ebene erscheinen
+]{glossaries}
