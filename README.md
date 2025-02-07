@@ -7,8 +7,3 @@ This repository contains the materials and documents related to my Bachelor Thes
 - Thesis document
 - Images
 - Latex
-
-
-## License
-
-This project is licensed under the MIT License.
